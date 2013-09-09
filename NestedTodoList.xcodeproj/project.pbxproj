@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A4161F19AB3B142B05A0202 /* FetchedResultsControllerDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41604D63D2807A7C610E5E /* FetchedResultsControllerDataSourceTests.m */; };
+		5A4163A76DDCF8AEB19D1790 /* NestedTodoListTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41608847D1337DE961C8F8 /* NestedTodoListTestCase.m */; };
+		5A4163C7F58A0D7595B9F73C /* FetchedResultsControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4167CC869AC0174B1C0C88 /* FetchedResultsControllerDataSource.m */; };
+		5A4166B62320A10359BAAC71 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4160E416D88163A9F3E924 /* Store.m */; };
+		5A416999CB98B12128B00608 /* PersistentStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416CCD063DD5025445EAB8 /* PersistentStack.m */; };
+		5A416A6D6E3E6C333239C66C /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416BF7C95033D7902D344E /* ItemViewController.m */; };
+		5A416C73820F74DA1A332DA9 /* StoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4168C601CB2EC163B04CDE /* StoreTests.m */; };
+		831D60DE17BA3C43000EEBED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D60DD17BA3C43000EEBED /* UIKit.framework */; };
+		831D60E017BA3C43000EEBED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D60DF17BA3C43000EEBED /* Foundation.framework */; };
+		831D60E217BA3C43000EEBED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D60E117BA3C43000EEBED /* CoreGraphics.framework */; };
+		831D60E817BA3C43000EEBED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 831D60E617BA3C43000EEBED /* InfoPlist.strings */; };
+		831D60EA17BA3C43000EEBED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 831D60E917BA3C43000EEBED /* main.m */; };
+		831D60EE17BA3C43000EEBED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 831D60ED17BA3C43000EEBED /* AppDelegate.m */; };
+		831D60F017BA3C43000EEBED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 831D60EF17BA3C43000EEBED /* Default.png */; };
+		831D60F217BA3C43000EEBED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 831D60F117BA3C43000EEBED /* Default@2x.png */; };
+		831D60F417BA3C43000EEBED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 831D60F317BA3C43000EEBED /* Default-568h@2x.png */; };
+		831D60FC17BA3C43000EEBED /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D60FB17BA3C43000EEBED /* SenTestingKit.framework */; };
+		831D60FD17BA3C43000EEBED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D60DD17BA3C43000EEBED /* UIKit.framework */; };
+		831D60FE17BA3C43000EEBED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D60DF17BA3C43000EEBED /* Foundation.framework */; };
+		831D610617BA3C43000EEBED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 831D610417BA3C43000EEBED /* InfoPlist.strings */; };
+		831D611417BA3CBC000EEBED /* PersistentStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 831D611317BA3CBC000EEBED /* PersistentStackTests.m */; };
+		831D611617BA4090000EEBED /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D611517BA4090000EEBED /* CoreData.framework */; };
+		831D611917BA42F0000EEBED /* NestedTodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 831D611717BA42F0000EEBED /* NestedTodoList.xcdatamodeld */; };
+		831D613617BA5D53000EEBED /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D611517BA4090000EEBED /* CoreData.framework */; };
+		831D613B17BBD626000EEBED /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831D613A17BBD626000EEBED /* Storyboard.storyboard */; };
+		831D614317BBD9BF000EEBED /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 831D614217BBD9BF000EEBED /* Item.m */; };
+		FBE263E4DE4F4770A4C2D17F /* libPods-NestedTodoListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77214FB260DA49B6B9D4ED7F /* libPods-NestedTodoListTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		831D60FF17BA3C43000EEBED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 831D60D217BA3C43000EEBED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 831D60D917BA3C43000EEBED;
+			remoteInfo = NestedTodoList;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0734708218D34ED8B35B408D /* Pods-NestedTodoListTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedTodoListTests.xcconfig"; path = "Pods/Pods-NestedTodoListTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		5A41604D63D2807A7C610E5E /* FetchedResultsControllerDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedResultsControllerDataSourceTests.m; sourceTree = "<group>"; };
+		5A416072C9792D08B9468782 /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
+		5A41608847D1337DE961C8F8 /* NestedTodoListTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NestedTodoListTestCase.m; sourceTree = "<group>"; };
+		5A4160BD08FECD2EFD9CBFBE /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		5A4160E416D88163A9F3E924 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		5A416125B53373D94540DB89 /* NestedTodoListTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NestedTodoListTestCase.h; sourceTree = "<group>"; };
+		5A4163B14B467C08E8986E57 /* PersistentStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistentStack.h; sourceTree = "<group>"; };
+		5A4167CC869AC0174B1C0C88 /* FetchedResultsControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedResultsControllerDataSource.m; sourceTree = "<group>"; };
+		5A4168C601CB2EC163B04CDE /* StoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTests.m; sourceTree = "<group>"; };
+		5A416BF7C95033D7902D344E /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
+		5A416CCD063DD5025445EAB8 /* PersistentStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistentStack.m; sourceTree = "<group>"; };
+		5A416FE8D06E43F3E2208D4B /* FetchedResultsControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchedResultsControllerDataSource.h; sourceTree = "<group>"; };
+		77214FB260DA49B6B9D4ED7F /* libPods-NestedTodoListTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NestedTodoListTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		831D60DA17BA3C43000EEBED /* NestedTodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestedTodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		831D60DD17BA3C43000EEBED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		831D60DF17BA3C43000EEBED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		831D60E117BA3C43000EEBED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		831D60E517BA3C43000EEBED /* NestedTodoList-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NestedTodoList-Info.plist"; sourceTree = "<group>"; };
+		831D60E717BA3C43000EEBED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		831D60E917BA3C43000EEBED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		831D60EB17BA3C43000EEBED /* NestedTodoList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NestedTodoList-Prefix.pch"; sourceTree = "<group>"; };
+		831D60EC17BA3C43000EEBED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		831D60ED17BA3C43000EEBED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		831D60EF17BA3C43000EEBED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		831D60F117BA3C43000EEBED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		831D60F317BA3C43000EEBED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		831D60FA17BA3C43000EEBED /* NestedTodoListTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NestedTodoListTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		831D60FB17BA3C43000EEBED /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		831D610317BA3C43000EEBED /* NestedTodoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NestedTodoListTests-Info.plist"; sourceTree = "<group>"; };
+		831D610517BA3C43000EEBED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		831D611317BA3CBC000EEBED /* PersistentStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistentStackTests.m; sourceTree = "<group>"; };
+		831D611517BA4090000EEBED /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		831D611817BA42F0000EEBED /* NestedTodoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NestedTodoList.xcdatamodel; sourceTree = "<group>"; };
+		831D613A17BBD626000EEBED /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		831D614117BBD9BF000EEBED /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = ../Item.h; sourceTree = "<group>"; };
+		831D614217BBD9BF000EEBED /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = ../Item.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		831D60D717BA3C43000EEBED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831D611617BA4090000EEBED /* CoreData.framework in Frameworks */,
+				831D60DE17BA3C43000EEBED /* UIKit.framework in Frameworks */,
+				831D60E017BA3C43000EEBED /* Foundation.framework in Frameworks */,
+				831D60E217BA3C43000EEBED /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		831D60F617BA3C43000EEBED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831D613617BA5D53000EEBED /* CoreData.framework in Frameworks */,
+				831D60FC17BA3C43000EEBED /* SenTestingKit.framework in Frameworks */,
+				831D60FD17BA3C43000EEBED /* UIKit.framework in Frameworks */,
+				831D60FE17BA3C43000EEBED /* Foundation.framework in Frameworks */,
+				FBE263E4DE4F4770A4C2D17F /* libPods-NestedTodoListTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		831D60D117BA3C43000EEBED = {
+			isa = PBXGroup;
+			children = (
+				831D611517BA4090000EEBED /* CoreData.framework */,
+				831D60E317BA3C43000EEBED /* NestedTodoList */,
+				831D610117BA3C43000EEBED /* NestedTodoListTests */,
+				831D60DC17BA3C43000EEBED /* Frameworks */,
+				831D60DB17BA3C43000EEBED /* Products */,
+				0734708218D34ED8B35B408D /* Pods-NestedTodoListTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		831D60DB17BA3C43000EEBED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				831D60DA17BA3C43000EEBED /* NestedTodoList.app */,
+				831D60FA17BA3C43000EEBED /* NestedTodoListTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		831D60DC17BA3C43000EEBED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				831D60DD17BA3C43000EEBED /* UIKit.framework */,
+				831D60DF17BA3C43000EEBED /* Foundation.framework */,
+				831D60E117BA3C43000EEBED /* CoreGraphics.framework */,
+				831D60FB17BA3C43000EEBED /* SenTestingKit.framework */,
+				77214FB260DA49B6B9D4ED7F /* libPods-NestedTodoListTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		831D60E317BA3C43000EEBED /* NestedTodoList */ = {
+			isa = PBXGroup;
+			children = (
+				831D60E417BA3C43000EEBED /* Supporting Files */,
+				831D614117BBD9BF000EEBED /* Item.h */,
+				831D614217BBD9BF000EEBED /* Item.m */,
+				831D613A17BBD626000EEBED /* Storyboard.storyboard */,
+				831D611717BA42F0000EEBED /* NestedTodoList.xcdatamodeld */,
+				831D60EC17BA3C43000EEBED /* AppDelegate.h */,
+				831D60ED17BA3C43000EEBED /* AppDelegate.m */,
+				5A416CCD063DD5025445EAB8 /* PersistentStack.m */,
+				5A4163B14B467C08E8986E57 /* PersistentStack.h */,
+				5A4167CC869AC0174B1C0C88 /* FetchedResultsControllerDataSource.m */,
+				5A416FE8D06E43F3E2208D4B /* FetchedResultsControllerDataSource.h */,
+				5A416BF7C95033D7902D344E /* ItemViewController.m */,
+				5A416072C9792D08B9468782 /* ItemViewController.h */,
+				5A4160E416D88163A9F3E924 /* Store.m */,
+				5A4160BD08FECD2EFD9CBFBE /* Store.h */,
+			);
+			path = NestedTodoList;
+			sourceTree = "<group>";
+		};
+		831D60E417BA3C43000EEBED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				831D60E517BA3C43000EEBED /* NestedTodoList-Info.plist */,
+				831D60E617BA3C43000EEBED /* InfoPlist.strings */,
+				831D60E917BA3C43000EEBED /* main.m */,
+				831D60EB17BA3C43000EEBED /* NestedTodoList-Prefix.pch */,
+				831D60EF17BA3C43000EEBED /* Default.png */,
+				831D60F117BA3C43000EEBED /* Default@2x.png */,
+				831D60F317BA3C43000EEBED /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		831D610117BA3C43000EEBED /* NestedTodoListTests */ = {
+			isa = PBXGroup;
+			children = (
+				831D610217BA3C43000EEBED /* Supporting Files */,
+				831D611317BA3CBC000EEBED /* PersistentStackTests.m */,
+				5A41604D63D2807A7C610E5E /* FetchedResultsControllerDataSourceTests.m */,
+				5A4168C601CB2EC163B04CDE /* StoreTests.m */,
+				5A41608847D1337DE961C8F8 /* NestedTodoListTestCase.m */,
+				5A416125B53373D94540DB89 /* NestedTodoListTestCase.h */,
+			);
+			path = NestedTodoListTests;
+			sourceTree = "<group>";
+		};
+		831D610217BA3C43000EEBED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				831D610317BA3C43000EEBED /* NestedTodoListTests-Info.plist */,
+				831D610417BA3C43000EEBED /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		831D60D917BA3C43000EEBED /* NestedTodoList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 831D610C17BA3C43000EEBED /* Build configuration list for PBXNativeTarget "NestedTodoList" */;
+			buildPhases = (
+				831D60D617BA3C43000EEBED /* Sources */,
+				831D60D717BA3C43000EEBED /* Frameworks */,
+				831D60D817BA3C43000EEBED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NestedTodoList;
+			productName = NestedTodoList;
+			productReference = 831D60DA17BA3C43000EEBED /* NestedTodoList.app */;
+			productType = "com.apple.product-type.application";
+		};
+		831D60F917BA3C43000EEBED /* NestedTodoListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 831D610F17BA3C43000EEBED /* Build configuration list for PBXNativeTarget "NestedTodoListTests" */;
+			buildPhases = (
+				F5056677B9DB46FEBC892A86 /* Check Pods Manifest.lock */,
+				831D60F517BA3C43000EEBED /* Sources */,
+				831D60F617BA3C43000EEBED /* Frameworks */,
+				831D60F717BA3C43000EEBED /* Resources */,
+				831D60F817BA3C43000EEBED /* ShellScript */,
+				90FCEE4460474DEE9C5568AC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				831D610017BA3C43000EEBED /* PBXTargetDependency */,
+			);
+			name = NestedTodoListTests;
+			productName = NestedTodoListTests;
+			productReference = 831D60FA17BA3C43000EEBED /* NestedTodoListTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		831D60D217BA3C43000EEBED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Chris Eidhof";
+			};
+			buildConfigurationList = 831D60D517BA3C43000EEBED /* Build configuration list for PBXProject "NestedTodoList" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 831D60D117BA3C43000EEBED;
+			productRefGroup = 831D60DB17BA3C43000EEBED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				831D60D917BA3C43000EEBED /* NestedTodoList */,
+				831D60F917BA3C43000EEBED /* NestedTodoListTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		831D60D817BA3C43000EEBED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831D60E817BA3C43000EEBED /* InfoPlist.strings in Resources */,
+				831D60F017BA3C43000EEBED /* Default.png in Resources */,
+				831D60F217BA3C43000EEBED /* Default@2x.png in Resources */,
+				831D60F417BA3C43000EEBED /* Default-568h@2x.png in Resources */,
+				831D613B17BBD626000EEBED /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		831D60F717BA3C43000EEBED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831D610617BA3C43000EEBED /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		831D60F817BA3C43000EEBED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		90FCEE4460474DEE9C5568AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-NestedTodoListTests-resources.sh\"\n";
+		};
+		F5056677B9DB46FEBC892A86 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		831D60D617BA3C43000EEBED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831D60EA17BA3C43000EEBED /* main.m in Sources */,
+				831D60EE17BA3C43000EEBED /* AppDelegate.m in Sources */,
+				5A416999CB98B12128B00608 /* PersistentStack.m in Sources */,
+				831D611917BA42F0000EEBED /* NestedTodoList.xcdatamodeld in Sources */,
+				5A4163C7F58A0D7595B9F73C /* FetchedResultsControllerDataSource.m in Sources */,
+				5A416A6D6E3E6C333239C66C /* ItemViewController.m in Sources */,
+				831D614317BBD9BF000EEBED /* Item.m in Sources */,
+				5A4166B62320A10359BAAC71 /* Store.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		831D60F517BA3C43000EEBED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831D611417BA3CBC000EEBED /* PersistentStackTests.m in Sources */,
+				5A4161F19AB3B142B05A0202 /* FetchedResultsControllerDataSourceTests.m in Sources */,
+				5A416C73820F74DA1A332DA9 /* StoreTests.m in Sources */,
+				5A4163A76DDCF8AEB19D1790 /* NestedTodoListTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		831D610017BA3C43000EEBED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 831D60D917BA3C43000EEBED /* NestedTodoList */;
+			targetProxy = 831D60FF17BA3C43000EEBED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		831D60E617BA3C43000EEBED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				831D60E717BA3C43000EEBED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		831D610417BA3C43000EEBED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				831D610517BA3C43000EEBED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		831D610A17BA3C43000EEBED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		831D610B17BA3C43000EEBED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		831D610D17BA3C43000EEBED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NestedTodoList/NestedTodoList-Prefix.pch";
+				INFOPLIST_FILE = "NestedTodoList/NestedTodoList-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		831D610E17BA3C43000EEBED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NestedTodoList/NestedTodoList-Prefix.pch";
+				INFOPLIST_FILE = "NestedTodoList/NestedTodoList-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		831D611017BA3C43000EEBED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0734708218D34ED8B35B408D /* Pods-NestedTodoListTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NestedTodoList.app/NestedTodoList";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NestedTodoList/NestedTodoList-Prefix.pch";
+				INFOPLIST_FILE = "NestedTodoListTests/NestedTodoListTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		831D611117BA3C43000EEBED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0734708218D34ED8B35B408D /* Pods-NestedTodoListTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NestedTodoList.app/NestedTodoList";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NestedTodoList/NestedTodoList-Prefix.pch";
+				INFOPLIST_FILE = "NestedTodoListTests/NestedTodoListTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		831D60D517BA3C43000EEBED /* Build configuration list for PBXProject "NestedTodoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831D610A17BA3C43000EEBED /* Debug */,
+				831D610B17BA3C43000EEBED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		831D610C17BA3C43000EEBED /* Build configuration list for PBXNativeTarget "NestedTodoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831D610D17BA3C43000EEBED /* Debug */,
+				831D610E17BA3C43000EEBED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		831D610F17BA3C43000EEBED /* Build configuration list for PBXNativeTarget "NestedTodoListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831D611017BA3C43000EEBED /* Debug */,
+				831D611117BA3C43000EEBED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		831D611717BA42F0000EEBED /* NestedTodoList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				831D611817BA42F0000EEBED /* NestedTodoList.xcdatamodel */,
+			);
+			currentVersion = 831D611817BA42F0000EEBED /* NestedTodoList.xcdatamodel */;
+			path = NestedTodoList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 831D60D217BA3C43000EEBED /* Project object */;
+}
