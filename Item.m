@@ -7,7 +7,6 @@
 //
 
 #import "Item.h"
-#import "Item.h"
 
 
 @implementation Item
