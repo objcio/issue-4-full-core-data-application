@@ -55,7 +55,7 @@
     NSSet* siblings = self.parent.children;
     NSPredicate* predicate = [NSPredicate predicateWithFormat:@"order > %@", self.order];
     NSSet* itemsAfterSelf = [siblings filteredSetUsingPredicate:predicate];
-    [itemsAfterSelf enumerateObjectsUsingBlock:^(Item* sibling, BOOL* stop)
+    [itemsAfterSelf enumerateObjectsUsingBlock:^(Item* sibling, __unused BOOL* stop)
     {
         sibling.order = @(sibling.order.integerValue - 1);
     }];

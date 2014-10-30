@@ -120,7 +120,7 @@ static NSString* const selectItemSegue = @"selectItem";
     }
 }
 
-- (void)scrollViewWillEndDragging:(UIScrollView*)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint*)targetContentOffset
+- (void)scrollViewWillEndDragging:(__unused UIScrollView*)scrollView withVelocity:(__unused CGPoint)velocity targetContentOffset:(inout __unused CGPoint*)targetContentOffset
 {
     BOOL itemFieldVisible = self.tableView.contentInset.top == 0;
     if (itemFieldVisible) {

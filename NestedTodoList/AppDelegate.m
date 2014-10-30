@@ -19,7 +19,7 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
+- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(__unused NSDictionary*)launchOptions
 {
     UINavigationController* navigationController = (UINavigationController*) self.window.rootViewController;
     ItemViewController* rootViewController = (ItemViewController*)navigationController.topViewController;
@@ -43,7 +43,7 @@
     return [[NSBundle mainBundle] URLForResource:@"NestedTodoList" withExtension:@"momd"];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
+- (void)applicationDidEnterBackground:(__unused UIApplication *)application
 {
     [self.store.managedObjectContext save:NULL];
 }
