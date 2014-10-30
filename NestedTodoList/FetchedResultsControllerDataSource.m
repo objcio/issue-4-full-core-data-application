@@ -40,7 +40,8 @@
 {
     id<FetchedResultsControllerDataSourceDelegate> strongDelegate = self.delegate;
     id object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    id cell = [tableView dequeueReusableCellWithIdentifier:self.reuseIdentifier forIndexPath:indexPath];
+    id cell = [tableView dequeueReusableCellWithIdentifier:self.reuseIdentifier
+                                              forIndexPath:indexPath];
     [strongDelegate configureCell:cell withObject:object];
     return cell;
 }
@@ -71,14 +72,22 @@
 
 - (void)controller:(__unused NSFetchedResultsController*)controller didChangeObject:(__unused id)anObject atIndexPath:(NSIndexPath*)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath*)newIndexPath
 {
-    if (type == NSFetchedResultsChangeInsert) {
-        [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    } else if (type == NSFetchedResultsChangeMove) {
-        [self.tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
-    } else if (type == NSFetchedResultsChangeDelete) {
-        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    } else {
-        NSAssert(NO,@"");
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertRowsAtIndexPaths:@[newIndexPath]
+                                  withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        case NSFetchedResultsChangeMove:
+            [self.tableView moveRowAtIndexPath:indexPath
+                                   toIndexPath:newIndexPath];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                                  withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        default:
+            NSAssert(NO,@"");
+            break;
     }
 }
 

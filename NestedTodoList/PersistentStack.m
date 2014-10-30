@@ -35,8 +35,12 @@
     self.managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     self.managedObjectContext.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
     NSError* error;
-    [self.managedObjectContext.persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.storeURL options:nil error:&error];
-    if (error) {
+    
+    if (![self.managedObjectContext.persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
+                                                                           configuration:nil
+                                                                                     URL:self.storeURL
+                                                                                 options:nil
+                                                                                   error:&error]) {
         NSLog(@"error: %@", error);
     }
     self.managedObjectContext.undoManager = [[NSUndoManager alloc] init];

@@ -15,10 +15,19 @@
     // todo: use a cache?
     NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Item"];
     request.predicate = [NSPredicate predicateWithFormat:@"parent = %@", nil];
-    NSArray* objects = [self.managedObjectContext executeFetchRequest:request error:NULL];
+    NSError *error;
+    NSArray* objects = [self.managedObjectContext executeFetchRequest:request
+                                                                error:&error];
+    
+    if (error) {
+        NSLog(@"error: %@", error);
+    }
+    
     Item* rootItem = [objects lastObject];
     if (rootItem == nil) {
-        rootItem = [Item insertItemWithTitle:nil parent:nil inManagedObjectContext:self.managedObjectContext];
+        rootItem = [Item insertItemWithTitle:nil
+                                      parent:nil
+                      inManagedObjectContext:self.managedObjectContext];
     }
     return rootItem;
 }

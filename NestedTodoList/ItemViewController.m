@@ -99,7 +99,9 @@ static NSString* const selectItemSegue = @"selectItem";
     NSString* title = textField.text;
     NSString* actionName = [NSString stringWithFormat:NSLocalizedString(@"add item \"%@\"", @"Undo action name of add item"), title];
     [self.undoManager setActionName:actionName];
-    [Item insertItemWithTitle:title parent:self.parent inManagedObjectContext:self.managedObjectContext];
+    [Item insertItemWithTitle:title
+                       parent:self.parent
+       inManagedObjectContext:self.managedObjectContext];
     textField.text = @"";
     [textField resignFirstResponder];
     [self hideNewItemField];
