@@ -2,9 +2,7 @@
 // Created by Chris Eidhof
 //
 
-
-#import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+@import CoreData;
 
 @class NSFetchedResultsController;
 

@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 Chris Eidhof. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+@import CoreData;
 
 @class Item;
 

@@ -2,7 +2,6 @@
 // Created by Chris Eidhof
 //
 
-
 #import "ItemViewController.h"
 #import "FetchedResultsControllerDataSource.h"
 #import "Store.h"

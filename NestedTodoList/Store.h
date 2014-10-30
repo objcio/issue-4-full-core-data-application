@@ -2,9 +2,6 @@
 // Created by Chris Eidhof
 //
 
-
-#import <Foundation/Foundation.h>
-
 @class Item;
 @class NSFetchedResultsController;
 

@@ -5,9 +5,7 @@
 // To change the template use AppCode | Preferences | File Templates.
 //
 
-
 #import "PersistentStack.h"
-
 
 @interface PersistentStack ()
 

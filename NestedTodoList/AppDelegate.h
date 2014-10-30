@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Chris Eidhof. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @class Store;
 @class PersistentStack;

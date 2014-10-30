@@ -2,10 +2,7 @@
 // Created by Chris Eidhof
 //
 
-
-#import <CoreData/CoreData.h>
 #import "FetchedResultsControllerDataSource.h"
-
 
 @interface FetchedResultsControllerDataSource ()
 

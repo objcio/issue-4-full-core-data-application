@@ -2,11 +2,9 @@
 // Created by Chris Eidhof
 //
 
-
-#import <CoreData/CoreData.h>
+@import CoreData;
 #import "Store.h"
 #import "Item.h"
-
 
 @implementation Store
 
