@@ -12,8 +12,8 @@ static NSString* const selectItemSegue = @"selectItem";
 
 @interface ItemViewController () <FetchedResultsControllerDataSourceDelegate, UITextFieldDelegate>
 
-@property (nonatomic, strong) FetchedResultsControllerDataSource* fetchedResultsControllerDataSource;
-@property (nonatomic, strong) UITextField* titleField;
+@property (nonatomic, readwrite) FetchedResultsControllerDataSource* fetchedResultsControllerDataSource;
+@property (nonatomic, readwrite) UITextField* titleField;
 
 @end
 

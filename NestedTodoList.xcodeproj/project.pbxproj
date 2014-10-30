@@ -149,20 +149,20 @@
 			isa = PBXGroup;
 			children = (
 				831D60E417BA3C43000EEBED /* Supporting Files */,
-				831D614117BBD9BF000EEBED /* Item.h */,
-				831D614217BBD9BF000EEBED /* Item.m */,
 				831D613A17BBD626000EEBED /* Storyboard.storyboard */,
 				831D611717BA42F0000EEBED /* NestedTodoList.xcdatamodeld */,
+				831D614117BBD9BF000EEBED /* Item.h */,
+				831D614217BBD9BF000EEBED /* Item.m */,
 				831D60EC17BA3C43000EEBED /* AppDelegate.h */,
 				831D60ED17BA3C43000EEBED /* AppDelegate.m */,
-				5A416CCD063DD5025445EAB8 /* PersistentStack.m */,
 				5A4163B14B467C08E8986E57 /* PersistentStack.h */,
+				5A416CCD063DD5025445EAB8 /* PersistentStack.m */,
 				5A416FE8D06E43F3E2208D4B /* FetchedResultsControllerDataSource.h */,
 				5A4167CC869AC0174B1C0C88 /* FetchedResultsControllerDataSource.m */,
-				5A416BF7C95033D7902D344E /* ItemViewController.m */,
 				5A416072C9792D08B9468782 /* ItemViewController.h */,
-				5A4160E416D88163A9F3E924 /* Store.m */,
+				5A416BF7C95033D7902D344E /* ItemViewController.m */,
 				5A4160BD08FECD2EFD9CBFBE /* Store.h */,
+				5A4160E416D88163A9F3E924 /* Store.m */,
 				367AFDF81A02733E0011BDEC /* Images.xcassets */,
 			);
 			path = NestedTodoList;

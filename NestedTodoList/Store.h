@@ -10,7 +10,7 @@
 
 @interface Store : NSObject
 
-@property (nonatomic, strong) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic) NSManagedObjectContext* managedObjectContext;
 
 - (Item*)rootItem;
 

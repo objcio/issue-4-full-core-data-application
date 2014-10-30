@@ -11,20 +11,20 @@
 
 @interface PersistentStack ()
 
-@property (nonatomic,strong,readwrite) NSManagedObjectContext* managedObjectContext;
-@property (nonatomic,strong) NSURL* modelURL;
-@property (nonatomic,strong) NSURL* storeURL;
+@property (nonatomic, readwrite) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic, readonly) NSURL* modelURL;
+@property (nonatomic, readonly) NSURL* storeURL;
 
 @end
 
 @implementation PersistentStack
 
-- (id)initWithStoreURL:(NSURL*)storeURL modelURL:(NSURL*)modelURL
+- (instancetype)initWithStoreURL:(NSURL*)storeURL modelURL:(NSURL*)modelURL
 {
     self = [super init];
     if (self) {
-        self.storeURL = storeURL;
-        self.modelURL = modelURL;
+        _storeURL = storeURL;
+        _modelURL = modelURL;
         [self setupManagedObjectContext];
     }
     return self;

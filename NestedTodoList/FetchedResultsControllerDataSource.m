@@ -9,18 +9,18 @@
 
 @interface FetchedResultsControllerDataSource ()
 
-@property (nonatomic, strong) UITableView* tableView;
+@property (nonatomic, readwrite) UITableView* tableView;
 
 @end
 
 @implementation FetchedResultsControllerDataSource
 
-- (id)initWithTableView:(UITableView*)tableView
+- (instancetype)initWithTableView:(UITableView*)tableView
 {
     self = [super init];
     if (self) {
-        self.tableView = tableView;
-        self.tableView.dataSource = self;
+        _tableView = tableView;
+        _tableView.dataSource = self;
     }
     return self;
 }

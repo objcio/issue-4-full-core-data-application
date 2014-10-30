@@ -13,8 +13,8 @@
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) Store* store;
-@property (nonatomic, strong) PersistentStack* persistentStack;
+@property (nonatomic, readwrite) Store* store;
+@property (nonatomic, readwrite) PersistentStack* persistentStack;
 @end
 
 @implementation AppDelegate

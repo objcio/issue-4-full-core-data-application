@@ -12,6 +12,6 @@
 
 @interface ItemViewController : UITableViewController
 
-@property (nonatomic, strong) Item* parent;
+@property (nonatomic) Item* parent;
 
 @end
