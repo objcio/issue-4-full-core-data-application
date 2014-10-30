@@ -42,6 +42,10 @@
                                                               appropriateForURL:nil
                                                                          create:YES
                                                                           error:NULL];
+    
+#if DEBUG
+    NSLog(@"\n  %@\n", [documentsDirectory URLByAppendingPathComponent:@"db.sqlite"]);
+#endif
     return [documentsDirectory URLByAppendingPathComponent:@"db.sqlite"];
 }
 
