@@ -19,22 +19,24 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(__unused NSDictionary*)launchOptions
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(__unused NSDictionary *)launchOptions
 {
-    UINavigationController* navigationController = (UINavigationController*) self.window.rootViewController;
-    ItemViewController* rootViewController = (ItemViewController*)navigationController.topViewController;
-    NSAssert([rootViewController isKindOfClass:[ItemViewController class]], @"Should have an item view controller");
+    UINavigationController* navigationController = (UINavigationController *) self.window.rootViewController;
+    ItemViewController* rootViewController = (ItemViewController *)navigationController.topViewController;
+    
+    NSAssert([rootViewController isKindOfClass:[ItemViewController class]], @"The root view controller is not a an instance of ItemViewController.");
+    
     self.persistentStack = [[PersistentStack alloc] initWithStoreURL:self.storeURL
                                                             modelURL:self.modelURL];
     self.store = [[Store alloc] init];
     self.store.managedObjectContext = self.persistentStack.managedObjectContext;
     rootViewController.parent = self.store.rootItem;
     application.applicationSupportsShakeToEdit = YES;
+    
     return YES;
 }
 
-- (NSURL*)storeURL
-{
+- (NSURL *)storeURL {
     NSURL* documentsDirectory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
                                                                        inDomain:NSUserDomainMask
                                                               appropriateForURL:nil
@@ -43,13 +45,12 @@
     return [documentsDirectory URLByAppendingPathComponent:@"db.sqlite"];
 }
 
-- (NSURL*)modelURL
-{
-    return [[NSBundle mainBundle] URLForResource:@"NestedTodoList" withExtension:@"momd"];
+- (NSURL *)modelURL {
+    return [[NSBundle mainBundle] URLForResource:@"NestedTodoList"
+                                   withExtension:@"momd"];
 }
 
-- (void)applicationDidEnterBackground:(__unused UIApplication *)application
-{
+- (void)applicationDidEnterBackground:(__unused UIApplication *)application {
     NSError *error;
     [self.store.managedObjectContext save:&error];
 }

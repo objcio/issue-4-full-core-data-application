@@ -18,9 +18,15 @@ static NSString* const selectItemSegue = @"selectItem";
 
 @implementation ItemViewController
 
+#pragma mark - UIViewController life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    // Add buttons
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                                           target:self
+                                                                                           action:@selector(insertItem:)];
+    
     [self setupFetchedResultsController];
     [self setupNewItemField];
 }
@@ -28,9 +34,6 @@ static NSString* const selectItemSegue = @"selectItem";
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    if ([self.tableView numberOfRowsInSection:0] > 0) {
-        [self hideNewItemField];
-    }
     self.fetchedResultsControllerDataSource.paused = NO;
 }
 
@@ -48,16 +51,16 @@ static NSString* const selectItemSegue = @"selectItem";
 }
 
 - (void)setupNewItemField {
-    self.titleField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.tableView.rowHeight)];
+    self.titleField = [[UITextField alloc] init];
+    self.titleField.translatesAutoresizingMaskIntoConstraints = NO;
+    self.titleField.textAlignment = NSTextAlignmentRight;
     self.titleField.delegate = self;
-    self.titleField.placeholder = NSLocalizedString(@"Add a new item", @"Placeholder text for adding a new item");
     self.tableView.tableHeaderView = self.titleField;
 }
 
-#pragma mark Fetched Results Controller Delegate
-
+#pragma mark - FetchedResultsControllerDataSourceDelegate
 - (void)configureCell:(id)theCell withObject:(id)object {
-    UITableViewCell* cell = theCell;
+    UITableViewCell* cell = (UITableViewCell *) theCell;
     Item* item = object;
     cell.textLabel.text = item.title;
 }
@@ -70,7 +73,6 @@ static NSString* const selectItemSegue = @"selectItem";
 }
 
 #pragma mark Segues
-
 - (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender {
     [super prepareForSegue:segue sender:sender];
     if ([segue.identifier isEqualToString:selectItemSegue]) {
@@ -83,7 +85,7 @@ static NSString* const selectItemSegue = @"selectItem";
     subItemViewController.parent = item;
 }
 
-
+#pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField*)textField {
     NSString* title = textField.text;
     NSString* actionName = [NSString stringWithFormat:NSLocalizedString(@"add item \"%@\"", @"Undo action name of add item"), title];
@@ -93,7 +95,6 @@ static NSString* const selectItemSegue = @"selectItem";
        inManagedObjectContext:self.managedObjectContext];
     textField.text = @"";
     [textField resignFirstResponder];
-    [self hideNewItemField];
     return NO;
 }
 
@@ -101,45 +102,22 @@ static NSString* const selectItemSegue = @"selectItem";
     return self.parent.managedObjectContext;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView*)scrollView {
-    if (-scrollView.contentOffset.y > self.titleField.bounds.size.height) {
-        [self showNewItemField];
-    } else if (scrollView.contentOffset.y > 0) {
-        [self hideNewItemField];
-    }
+- (void)insertItem:(__unused id)sender {
+    [self.titleField becomeFirstResponder];
 }
 
-- (void)scrollViewWillEndDragging:(__unused UIScrollView*)scrollView withVelocity:(__unused CGPoint)velocity targetContentOffset:(inout __unused CGPoint*)targetContentOffset {
-    BOOL itemFieldVisible = self.tableView.contentInset.top == 0;
-    if (itemFieldVisible) {
-        [self.titleField becomeFirstResponder];
-    }
-}
-
-- (void)showNewItemField {
-    UIEdgeInsets insets = self.tableView.contentInset;
-    insets.top = 0;
-    self.tableView.contentInset = insets;
-}
-
-- (void)hideNewItemField {
-    UIEdgeInsets insets = self.tableView.contentInset;
-    insets.top = -self.titleField.bounds.size.height;
-    self.tableView.contentInset = insets;
-}
-
-- (void)setParent:(Item*)parent {
+#pragma mark - Setters
+- (void)setParent:(Item *)parent {
     _parent = parent;
     self.navigationItem.title = parent.title;
 }
 
 #pragma mark Undo
-
 - (BOOL)canBecomeFirstResponder {
     return YES;
 }
 
-- (NSUndoManager*)undoManager {
+- (NSUndoManager *)undoManager {
     return self.managedObjectContext.undoManager;
 }
 
