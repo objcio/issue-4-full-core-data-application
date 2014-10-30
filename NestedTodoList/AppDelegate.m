@@ -59,5 +59,4 @@
     [self.store.managedObjectContext save:&error];
 }
 
-
 @end

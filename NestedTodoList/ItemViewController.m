@@ -95,6 +95,7 @@ static NSString* const selectItemSegue = @"selectItem";
        inManagedObjectContext:self.managedObjectContext];
     textField.text = @"";
     [textField resignFirstResponder];
+    
     return NO;
 }
 
@@ -102,8 +103,14 @@ static NSString* const selectItemSegue = @"selectItem";
     return self.parent.managedObjectContext;
 }
 
+/**
+ Displays the iOS keyboard by setting the property @c titleField as the first responder.
+ @warning If you type with your actual computer keyboard, then the keyboard in the iOS simulator will no longer appear. To solve, navigate to to iOS Simulator > Hardware > Keyboard and uncheck "Connect Hardware Keyboard"
+ @see http://stackoverflow.com/questions/24420873/xcode-6-keyboard-does-not-show-up-in-simulator#24497773
+ */
 - (void)insertItem:(__unused id)sender {
-    [self.titleField becomeFirstResponder];
+    NSAssert(self.titleField != nil, @"The property titleField is nil.");
+    NSAssert(YES == [self.titleField becomeFirstResponder], @"The property titleField refused to become the first responder.");
 }
 
 #pragma mark - Setters
