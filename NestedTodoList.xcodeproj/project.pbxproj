@@ -116,7 +116,6 @@
 		831D60D117BA3C43000EEBED = {
 			isa = PBXGroup;
 			children = (
-				831D611517BA4090000EEBED /* CoreData.framework */,
 				831D60E317BA3C43000EEBED /* NestedTodoList */,
 				831D610117BA3C43000EEBED /* NestedTodoListTests */,
 				831D60DC17BA3C43000EEBED /* Frameworks */,
@@ -137,6 +136,7 @@
 		831D60DC17BA3C43000EEBED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				831D611517BA4090000EEBED /* CoreData.framework */,
 				831D60DD17BA3C43000EEBED /* UIKit.framework */,
 				831D60DF17BA3C43000EEBED /* Foundation.framework */,
 				831D60E117BA3C43000EEBED /* CoreGraphics.framework */,

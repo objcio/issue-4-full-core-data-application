@@ -15,8 +15,7 @@
 
 @implementation FetchedResultsControllerDataSource
 
-- (instancetype)initWithTableView:(UITableView*)tableView
-{
+- (instancetype)initWithTableView:(UITableView*)tableView {
     self = [super init];
     if (self) {
         _tableView = tableView;
@@ -25,19 +24,16 @@
     return self;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(__unused UITableView*)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(__unused UITableView*)tableView {
     return (NSInteger)self.fetchedResultsController.sections.count;
 }
 
-- (NSInteger)tableView:(__unused UITableView*)tableView numberOfRowsInSection:(NSInteger)sectionIndex
-{
+- (NSInteger)tableView:(__unused UITableView*)tableView numberOfRowsInSection:(NSInteger)sectionIndex {
     id<NSFetchedResultsSectionInfo> section = self.fetchedResultsController.sections[(NSUInteger)sectionIndex];
     return (NSInteger)section.numberOfObjects;
 }
 
-- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
-{
+- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     id<FetchedResultsControllerDataSourceDelegate> strongDelegate = self.delegate;
     id object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     id cell = [tableView dequeueReusableCellWithIdentifier:self.reuseIdentifier
@@ -46,8 +42,7 @@
     return cell;
 }
 
-- (BOOL)tableView:(__unused UITableView*)tableView canEditRowAtIndexPath:(__unused NSIndexPath*)indexPath
-{
+- (BOOL)tableView:(__unused UITableView*)tableView canEditRowAtIndexPath:(__unused NSIndexPath*)indexPath {
     return YES;
 }
 
@@ -60,18 +55,15 @@
 
 #pragma mark NSFetchedResultsControllerDelegate
 
-- (void)controllerWillChangeContent:(__unused NSFetchedResultsController*)controller
-{
+- (void)controllerWillChangeContent:(__unused NSFetchedResultsController*)controller {
     [self.tableView beginUpdates];
 }
 
-- (void)controllerDidChangeContent:(__unused NSFetchedResultsController*)controller
-{
+- (void)controllerDidChangeContent:(__unused NSFetchedResultsController*)controller {
     [self.tableView endUpdates];
 }
 
-- (void)controller:(__unused NSFetchedResultsController*)controller didChangeObject:(__unused id)anObject atIndexPath:(NSIndexPath*)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath*)newIndexPath
-{
+- (void)controller:(__unused NSFetchedResultsController*)controller didChangeObject:(__unused id)anObject atIndexPath:(NSIndexPath*)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath*)newIndexPath {
     switch (type) {
         case NSFetchedResultsChangeInsert:
             [self.tableView insertRowsAtIndexPaths:@[newIndexPath]
@@ -91,8 +83,7 @@
     }
 }
 
-- (void)setFetchedResultsController:(NSFetchedResultsController*)fetchedResultsController
-{
+- (void)setFetchedResultsController:(NSFetchedResultsController*)fetchedResultsController {
     NSAssert(_fetchedResultsController == nil, @"TODO: you can currently only assign this property once");
     _fetchedResultsController = fetchedResultsController;
     fetchedResultsController.delegate = self;
@@ -100,19 +91,18 @@
 }
 
 
-- (id)selectedItem
-{
+- (id)selectedItem {
     NSIndexPath* path = self.tableView.indexPathForSelectedRow;
     return path ? [self.fetchedResultsController objectAtIndexPath:path] : nil;
 }
 
 
-- (void)setPaused:(BOOL)paused
-{
+- (void)setPaused:(BOOL)paused {
     _paused = paused;
     if (paused) {
         self.fetchedResultsController.delegate = nil;
-    } else {
+    }
+    else {
         self.fetchedResultsController.delegate = self;
         [self.fetchedResultsController performFetch:NULL];
         [self.tableView reloadData];

@@ -19,8 +19,7 @@
 
 @implementation PersistentStack
 
-- (instancetype)initWithStoreURL:(NSURL*)storeURL modelURL:(NSURL*)modelURL
-{
+- (instancetype)initWithStoreURL:(NSURL*)storeURL modelURL:(NSURL*)modelURL {
     self = [super init];
     if (self) {
         _storeURL = storeURL;
@@ -30,8 +29,7 @@
     return self;
 }
 
-- (void)setupManagedObjectContext
-{
+- (void)setupManagedObjectContext {
     self.managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     self.managedObjectContext.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
     NSError* error;
@@ -46,8 +44,7 @@
     self.managedObjectContext.undoManager = [[NSUndoManager alloc] init];
 }
 
-- (NSManagedObjectModel*)managedObjectModel
-{
+- (NSManagedObjectModel*)managedObjectModel {
     return [[NSManagedObjectModel alloc] initWithContentsOfURL:self.modelURL];
 }
 
