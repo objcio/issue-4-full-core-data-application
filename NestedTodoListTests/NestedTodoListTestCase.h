@@ -2,11 +2,9 @@
 // Created by Chris Eidhof
 //
 
+@import XCTest;
 
-#import <Foundation/Foundation.h>
-#import <SenTestingKit/SenTestingKit.h>
-
-@interface NestedTodoListTestCase : SenTestCase
+@interface NestedTodoListTestCase : XCTestCase
 
 - (NSManagedObjectContext*)managedObjectContextForTesting;
 

@@ -24,7 +24,6 @@
 		831D60F017BA3C43000EEBED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 831D60EF17BA3C43000EEBED /* Default.png */; };
 		831D60F217BA3C43000EEBED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 831D60F117BA3C43000EEBED /* Default@2x.png */; };
 		831D60F417BA3C43000EEBED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 831D60F317BA3C43000EEBED /* Default-568h@2x.png */; };
-		831D60FC17BA3C43000EEBED /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D60FB17BA3C43000EEBED /* SenTestingKit.framework */; };
 		831D60FD17BA3C43000EEBED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D60DD17BA3C43000EEBED /* UIKit.framework */; };
 		831D60FE17BA3C43000EEBED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D60DF17BA3C43000EEBED /* Foundation.framework */; };
 		831D610617BA3C43000EEBED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 831D610417BA3C43000EEBED /* InfoPlist.strings */; };
@@ -48,7 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0734708218D34ED8B35B408D /* Pods-NestedTodoListTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedTodoListTests.xcconfig"; path = "Pods/Pods-NestedTodoListTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		367AFDF81A02733E0011BDEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5A41604D63D2807A7C610E5E /* FetchedResultsControllerDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedResultsControllerDataSourceTests.m; sourceTree = "<group>"; };
 		5A416072C9792D08B9468782 /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 		831D60F117BA3C43000EEBED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		831D60F317BA3C43000EEBED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		831D60FA17BA3C43000EEBED /* NestedTodoListTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NestedTodoListTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		831D60FB17BA3C43000EEBED /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		831D610317BA3C43000EEBED /* NestedTodoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NestedTodoListTests-Info.plist"; sourceTree = "<group>"; };
 		831D610517BA3C43000EEBED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		831D611317BA3CBC000EEBED /* PersistentStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistentStackTests.m; sourceTree = "<group>"; };
@@ -86,6 +83,8 @@
 		831D613A17BBD626000EEBED /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		831D614117BBD9BF000EEBED /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = ../Item.h; sourceTree = "<group>"; };
 		831D614217BBD9BF000EEBED /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = ../Item.m; sourceTree = "<group>"; };
+		97142041AA9887C4D9ED3128 /* Pods-NestedTodoListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedTodoListTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NestedTodoListTests/Pods-NestedTodoListTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8C6659633CAF0D16DF1464F /* Pods-NestedTodoListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedTodoListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NestedTodoListTests/Pods-NestedTodoListTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +104,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				831D613617BA5D53000EEBED /* CoreData.framework in Frameworks */,
-				831D60FC17BA3C43000EEBED /* SenTestingKit.framework in Frameworks */,
 				831D60FD17BA3C43000EEBED /* UIKit.framework in Frameworks */,
 				831D60FE17BA3C43000EEBED /* Foundation.framework in Frameworks */,
 				FBE263E4DE4F4770A4C2D17F /* libPods-NestedTodoListTests.a in Frameworks */,
@@ -123,7 +121,7 @@
 				831D610117BA3C43000EEBED /* NestedTodoListTests */,
 				831D60DC17BA3C43000EEBED /* Frameworks */,
 				831D60DB17BA3C43000EEBED /* Products */,
-				0734708218D34ED8B35B408D /* Pods-NestedTodoListTests.xcconfig */,
+				BAF4E0EC27C9D8F77410071C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,7 +140,6 @@
 				831D60DD17BA3C43000EEBED /* UIKit.framework */,
 				831D60DF17BA3C43000EEBED /* Foundation.framework */,
 				831D60E117BA3C43000EEBED /* CoreGraphics.framework */,
-				831D60FB17BA3C43000EEBED /* SenTestingKit.framework */,
 				77214FB260DA49B6B9D4ED7F /* libPods-NestedTodoListTests.a */,
 			);
 			name = Frameworks;
@@ -207,6 +204,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BAF4E0EC27C9D8F77410071C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97142041AA9887C4D9ED3128 /* Pods-NestedTodoListTests.debug.xcconfig */,
+				C8C6659633CAF0D16DF1464F /* Pods-NestedTodoListTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,7 +252,7 @@
 			name = NestedTodoListTests;
 			productName = NestedTodoListTests;
 			productReference = 831D60FA17BA3C43000EEBED /* NestedTodoListTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -326,7 +332,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-NestedTodoListTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NestedTodoListTests/Pods-NestedTodoListTests-resources.sh\"\n";
 		};
 		F5056677B9DB46FEBC892A86 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -581,25 +587,25 @@
 		};
 		831D611017BA3C43000EEBED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0734708218D34ED8B35B408D /* Pods-NestedTodoListTests.xcconfig */;
+			baseConfigurationReference = 97142041AA9887C4D9ED3128 /* Pods-NestedTodoListTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NestedTodoList.app/NestedTodoList";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NestedTodoList/NestedTodoList-Prefix.pch";
 				INFOPLIST_FILE = "NestedTodoListTests/NestedTodoListTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
 		831D611117BA3C43000EEBED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0734708218D34ED8B35B408D /* Pods-NestedTodoListTests.xcconfig */;
+			baseConfigurationReference = C8C6659633CAF0D16DF1464F /* Pods-NestedTodoListTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NestedTodoList.app/NestedTodoList";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -607,7 +613,6 @@
 				INFOPLIST_FILE = "NestedTodoListTests/NestedTodoListTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
