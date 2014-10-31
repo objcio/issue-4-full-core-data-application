@@ -13,40 +13,50 @@
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) Store* store;
-@property (nonatomic, strong) PersistentStack* persistentStack;
+@property (nonatomic, readwrite) Store* store;
+@property (nonatomic, readwrite) PersistentStack* persistentStack;
 @end
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(__unused NSDictionary *)launchOptions
 {
-    UINavigationController* navigationController = (UINavigationController*) self.window.rootViewController;
-    ItemViewController* rootViewController = (ItemViewController*)navigationController.topViewController;
-    NSAssert([rootViewController isKindOfClass:[ItemViewController class]], @"Should have an item view controller");
-    self.persistentStack = [[PersistentStack alloc] initWithStoreURL:self.storeURL modelURL:self.modelURL];
+    UINavigationController* navigationController = (UINavigationController *) self.window.rootViewController;
+    ItemViewController* rootViewController = (ItemViewController *)navigationController.topViewController;
+    
+    NSAssert([rootViewController isKindOfClass:[ItemViewController class]], @"The root view controller is not a an instance of ItemViewController.");
+    
+    self.persistentStack = [[PersistentStack alloc] initWithStoreURL:self.storeURL
+                                                            modelURL:self.modelURL];
     self.store = [[Store alloc] init];
     self.store.managedObjectContext = self.persistentStack.managedObjectContext;
     rootViewController.parent = self.store.rootItem;
     application.applicationSupportsShakeToEdit = YES;
+    
     return YES;
 }
 
-- (NSURL*)storeURL
-{
-    NSURL* documentsDirectory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:NULL];
+- (NSURL *)storeURL {
+    NSURL* documentsDirectory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
+                                                                       inDomain:NSUserDomainMask
+                                                              appropriateForURL:nil
+                                                                         create:YES
+                                                                          error:NULL];
+    
+#if DEBUG
+    NSLog(@"\n  %@\n", [documentsDirectory URLByAppendingPathComponent:@"db.sqlite"]);
+#endif
     return [documentsDirectory URLByAppendingPathComponent:@"db.sqlite"];
 }
 
-- (NSURL*)modelURL
-{
-    return [[NSBundle mainBundle] URLForResource:@"NestedTodoList" withExtension:@"momd"];
+- (NSURL *)modelURL {
+    return [[NSBundle mainBundle] URLForResource:@"NestedTodoList"
+                                   withExtension:@"momd"];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    [self.store.managedObjectContext save:NULL];
+- (void)applicationDidEnterBackground:(__unused UIApplication *)application {
+    NSError *error;
+    [self.store.managedObjectContext save:&error];
 }
-
 
 @end

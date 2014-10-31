@@ -6,10 +6,7 @@
 //  Copyright (c) 2013 Chris Eidhof. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@class Store;
-@class PersistentStack;
+@import UIKit;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

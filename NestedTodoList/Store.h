@@ -2,15 +2,12 @@
 // Created by Chris Eidhof
 //
 
-
-#import <Foundation/Foundation.h>
-
 @class Item;
 @class NSFetchedResultsController;
 
 @interface Store : NSObject
 
-@property (nonatomic, strong) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic) NSManagedObjectContext* managedObjectContext;
 
 - (Item*)rootItem;
 

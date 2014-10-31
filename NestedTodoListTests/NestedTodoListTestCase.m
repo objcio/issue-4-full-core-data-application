@@ -2,11 +2,8 @@
 // Created by Chris Eidhof
 //
 
-
-#import <SenTestingKit/SenTestingKit.h>
-#import <CoreData/CoreData.h>
 #import "NestedTodoListTestCase.h"
-
+@import CoreData;
 
 @implementation NestedTodoListTestCase
 

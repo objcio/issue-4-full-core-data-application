@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Chris Eidhof. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "PersistentStack.h"
 
-@interface PersistentStackTests : SenTestCase
+@interface PersistentStackTests : XCTestCase
 
 @property (nonatomic, strong) PersistentStack* persistentStack;
 
@@ -24,19 +24,22 @@
     self.persistentStack = [[PersistentStack alloc] initWithStoreURL:storeURL modelURL:modelURL];
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wgnu"
 - (void)testInitializer
 {
-    STAssertNotNil(self.persistentStack, @"Should have a persistent stack");
+    XCTAssertNotNil(self.persistentStack, @"Should have a persistent stack");
 }
 
 - (void)testManagedObjectContext
 {
-    STAssertNotNil(self.persistentStack.managedObjectContext, @"Should have a managed object context");
-    STAssertNotNil(self.persistentStack.managedObjectContext.persistentStoreCoordinator, @"Should have a persistent store coordinator");
+    XCTAssertNotNil(self.persistentStack.managedObjectContext, @"Should have a managed object context");
+    XCTAssertNotNil(self.persistentStack.managedObjectContext.persistentStoreCoordinator, @"Should have a persistent store coordinator");
     NSPersistentStore* store = self.persistentStack.managedObjectContext.persistentStoreCoordinator.persistentStores[0];
-    STAssertNotNil(store, @"Should have a persistent store");
-    STAssertEqualObjects(store.type, NSSQLiteStoreType, @"Should be a sqlite store");
-    STAssertNotNil(self.persistentStack.managedObjectContext.undoManager, @"Should have an undo manager");
+    XCTAssertNotNil(store, @"Should have a persistent store");
+    XCTAssertEqualObjects(store.type, NSSQLiteStoreType, @"Should be a sqlite store");
+    XCTAssertNotNil(self.persistentStack.managedObjectContext.undoManager, @"Should have an undo manager");
 }
+#pragma clang diagnostic pop
 
 @end

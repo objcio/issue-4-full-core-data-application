@@ -6,17 +6,16 @@
 //  Copyright (c) 2013 Chris Eidhof. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+@import CoreData;
 
 @class Item;
 
 @interface Item : NSManagedObject
 
-@property (nonatomic, retain) NSString* title;
-@property (nonatomic, assign) NSNumber* order;
-@property (nonatomic, retain) Item* parent;
-@property (nonatomic, retain) NSSet* children;
+@property (nonatomic) NSString* title;
+@property (nonatomic) NSNumber* order;
+@property (nonatomic) Item* parent;
+@property (nonatomic) NSSet* children;
 
 + (instancetype)insertItemWithTitle:(NSString*)title
                              parent:(Item*)parent
