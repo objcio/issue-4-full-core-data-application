@@ -14,6 +14,9 @@ static NSString* const selectItemSegue = @"selectItem";
 @property (nonatomic, readwrite) FetchedResultsControllerDataSource* fetchedResultsControllerDataSource;
 @property (nonatomic, readwrite) UITextField* titleField;
 
+- (void)setupFetchedResultsController;
+- (void)setupNewItemField;
+
 @end
 
 @implementation ItemViewController
@@ -42,7 +45,7 @@ static NSString* const selectItemSegue = @"selectItem";
     self.fetchedResultsControllerDataSource.paused = YES;
 }
 
-
+#pragma mark - "Private" methods
 - (void)setupFetchedResultsController {
     self.fetchedResultsControllerDataSource = [[FetchedResultsControllerDataSource alloc] initWithTableView:self.tableView];
     self.fetchedResultsControllerDataSource.fetchedResultsController = self.parent.childrenFetchedResultsController;

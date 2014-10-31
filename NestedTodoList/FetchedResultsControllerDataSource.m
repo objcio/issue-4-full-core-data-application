@@ -61,11 +61,19 @@
 }
 
 - (void)controller:(__unused NSFetchedResultsController*)controller didChangeObject:(__unused id)anObject atIndexPath:(NSIndexPath*)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath*)newIndexPath {
+    id<FetchedResultsControllerDataSourceDelegate> strongDelegate = self.delegate;
+    
     switch (type) {
         case NSFetchedResultsChangeInsert:
             [self.tableView insertRowsAtIndexPaths:@[newIndexPath]
                                   withRowAnimation:UITableViewRowAnimationAutomatic];
             break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [strongDelegate configureCell:[self.tableView cellForRowAtIndexPath:indexPath]
+                               withObject:anObject];
+            break;
+            
         case NSFetchedResultsChangeMove:
             [self.tableView moveRowAtIndexPath:indexPath
                                    toIndexPath:newIndexPath];

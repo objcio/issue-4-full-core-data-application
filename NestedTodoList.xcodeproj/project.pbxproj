@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		360E0AA51A02ACFA004E67B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360E0AA41A02ACFA004E67B1 /* LaunchScreen.xib */; };
+		360E0AA71A02B69B004E67B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 360E0AA61A02B69B004E67B1 /* Localizable.strings */; };
 		3664EDC41A029B0D00D2CA0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3664EDC31A029B0D00D2CA0A /* Main.storyboard */; };
 		367AFDF91A02733E0011BDEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367AFDF81A02733E0011BDEC /* Images.xcassets */; };
 		5A4161F19AB3B142B05A0202 /* FetchedResultsControllerDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41604D63D2807A7C610E5E /* FetchedResultsControllerDataSourceTests.m */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		360E0AA41A02ACFA004E67B1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		360E0AA61A02B69B004E67B1 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../Localizable.strings; sourceTree = "<group>"; };
 		3664EDC31A029B0D00D2CA0A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		367AFDF81A02733E0011BDEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5A41604D63D2807A7C610E5E /* FetchedResultsControllerDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedResultsControllerDataSourceTests.m; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		831D60E417BA3C43000EEBED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				360E0AA61A02B69B004E67B1 /* Localizable.strings */,
 				831D60E517BA3C43000EEBED /* NestedTodoList-Info.plist */,
 				831D60E617BA3C43000EEBED /* InfoPlist.strings */,
 				831D60E917BA3C43000EEBED /* main.m */,
@@ -259,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360E0AA71A02B69B004E67B1 /* Localizable.strings in Resources */,
 				3664EDC41A029B0D00D2CA0A /* Main.storyboard in Resources */,
 				831D60E817BA3C43000EEBED /* InfoPlist.strings in Resources */,
 				360E0AA51A02ACFA004E67B1 /* LaunchScreen.xib in Resources */,
