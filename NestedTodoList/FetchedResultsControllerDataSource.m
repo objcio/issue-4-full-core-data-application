@@ -80,6 +80,17 @@
     }
 }
 
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
+    if (type == NSFetchedResultsChangeInsert) {
+        [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationAutomatic];
+    } else if (type == NSFetchedResultsChangeDelete) {
+        [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+    } else {
+        NSAssert(NO,@"");
+    }
+}
+
 - (void)setFetchedResultsController:(NSFetchedResultsController*)fetchedResultsController
 {
     NSAssert(_fetchedResultsController == nil, @"TODO: you can currently only assign this property once");
